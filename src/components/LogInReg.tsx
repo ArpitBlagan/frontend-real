@@ -2,13 +2,13 @@ import {useState , useContext , useEffect} from 'react'
 import { context } from './Context';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import PopUp from './PopUp';
 export interface error{
   reqError:boolean;
   errorText:string;
 }
 const LogInReg = () => {
   const [req,setRer]=useState<error>({reqError:false,errorText:""});
+  console.log(req);
   const [login,setL]=useState<boolean>(false);
   const [email,setE]=useState<string>("");
   const [password,setP]=useState<string>("");
