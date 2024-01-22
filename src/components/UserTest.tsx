@@ -17,7 +17,7 @@ const UserTest = () => {
   const [score,setScore]=useState<scoree[]>([]);
   const [statement,setStatement]=useState<statementt|null>(null);
   useEffect(()=>{
-    const sock=new WebSocket(`ws://real-backend-5tk8.onrender.com?name=${value.name}`);
+    const sock=new WebSocket(`wss://real-backend-5tk8.onrender.com?name=${value.name}`);
     const val=JSON.stringify({
       name:"addParticipant",
       id:value.key
